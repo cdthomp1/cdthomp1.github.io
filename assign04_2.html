@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SPIDER DEV</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="week04_css.css">
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="flavicon.ico">
+    <style>
+        #banner {
+            width: 100%;
+        }
+
+        .prof {
+            font-family: 'Roboto', Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+            min-width: 230px;
+            max-width: 315px;
+            width: 100%;
+            color: #ffffff;
+            text-align: left;
+            line-height: 1.4em;
+            background-color: #141414;
+        }
+
+        .prof * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.25s ease;
+            transition: all 0.25s ease;
+        }
+
+        .prof img {
+            max-width: 100%;
+            vertical-align: top;
+            opacity: 0.85;
+        }
+
+        .prof div {
+            width: 100%;
+            background-color: #141414;
+            padding: 25px;
+            position: relative;
+        }
+
+        .prof div:before {
+            position: absolute;
+            content: '';
+            bottom: 100%;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 55px 0 0 400px;
+            border-color: transparent transparent transparent #141414;
+        }
+
+        .prof .profile {
+            border-radius: 50%;
+            position: absolute;
+            bottom: 100%;
+            left: 25px;
+            z-index: 1;
+            max-width: 90px;
+            opacity: 1;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .prof .follow {
+            margin-right: 4%;
+            border-color: #2980b9;
+            color: #2980b9;
+        }
+
+        .prof h2 {
+            margin: 0 0 5px;
+            font-weight: 300;
+        }
+
+        .prof h2 span {
+            display: block;
+            font-size: 0.5em;
+            color: #2980b9;
+        }
+
+        .prof p {
+            margin: 0 0 10px;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        .headimg {
+            width: 315px;
+            height: 230px;
+        }
+
+        hr {
+            height: 3px;
+            background-image: radial-gradient(closest-side,
+                hsla(0, 0%, 50%, 1.0),
+                hsla(0, 0%, 50%, 0) 100%);
+            position: relative;
+            width: 900px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+
+        <header>
+            <h1>Spider Development</h1>
+            <a href="assign04.html"><img id="logo" src="spiderLogo.png" alt="Logo" /></a>
+        </header>
+
+        <nav>
+
+            <ul>
+                <li><a href="assign04.html">Home</a></li>
+                <li><a href="assign04_2.html">Staff</a></li>
+            </ul>
+        </nav>
+        <div id="banner">
+            <img id="banner" src="softwareBanner.jpg" alt="Banner Image">
+        </div>
+        <section class="row">
+            <h1 style="text-align: left; font-family: Palatino Linotype, Book Antiqua, Palatino, serif; font-weight: 900; font-size: 3rem; margin-left: 100px; margin-right: 100px; color: #000">OUR
+                PEOPLE MAKE US WHO WE ARE.
+                <br>AWESOME.</h1>
+            <p style="margin-left: 35px; margin-right: 35px;">We're instigators. Fire starters. Provocateurs. We rock
+                the boat. We cross the line. We make it rain.
+                We're tech savvy, brand savvy and strategically solid. We're planners. Schemers. Your clever,
+                calculating coconspirators bent on getting you a bigger piece of that market share pie.</p>
+        </section>
+        <h2 style="font-size: 2rem; margin-left: 100px; margin-right: 100px; color: #F0F3F5">Meet some of our Staff</h2>
+        <hr>
+        <section class="row">
+
+            <div class="prof">
+                <img src="javaScriptHeader.jpg" alt="sample87" class="headimg" />
+                <div>
+                    <img src="guyBusiness.jpg" alt="profile-sample4" class="profile" />
+                    <h2>Hans Down<span>Lead Software Engineer</span></h2>
+                    <p style="font-family: Tahoma, Geneva, sans-serif;">I lead a team and working alongside some of the most talented and thought leading technologists
+                        on our IT team. I aim to deliver quality software. </p>
+
+                </div>
+            </div>
+            <div class="prof hover"><img src="htmlCode.jpg" alt="sample74" class="headimg" />
+                <div>
+                    <img src="girlBusiness.jpg" alt="profile-sample2" class="profile" />
+                    <h2>Wisteria Widget<span>Head of Process and Technology</span></h2>
+                    <p style="font-family: Tahoma, Geneva, sans-serif;">I'm responsible for organizing programs to increase efficiency. I also collaborate with
+                        information engineers to solve management problems</p>
+
+                </div>
+            </div>
+            <div class="prof"><img src="customerRelation.jpg" alt="sample69" height="230px" />
+                <div>
+                    <img src="guy2Business.jpeg" alt="profile-sample5" class="profile" />
+                    <h2>Desmond Eagle<span>President of Customer Relations</span></h2>
+                    <p style="font-family: Tahoma, Geneva, sans-serif;">I work tirelessly to help deliver exceptional customer service for our clients. We work for you.
+                        Your problems become my goals.</p>
+
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="row">
+            <div class="leftcol">
+                <p style="font-size: .8rem; font-family: Tahoma, Geneva, sans-serif;">&copy; 2018 CS 213 - Cameron Thompson <br><a href="index.html">CS213
+                        Assingments</a></p>
+            </div>
+            <div class="rightcol" style="padding-left: 50%">
+                <div class="zoom">
+                    <a class="socialmedia" href="http://www.facebook.com"><img src="https://cdn.glitch.com/20790d66-e9ac-4887-aec3-5d280347f5be%2Ffacebook.png?1542826502265"
+                            alt="Facebook icon"></a>
+                    <a class="socialmedia" href="http://www.twitter.com"><img src="https://cdn.glitch.com/20790d66-e9ac-4887-aec3-5d280347f5be%2Ftwitter.png?1542826503976"
+                            alt="Twitter Icon"></a>
+                    <a class="socialmedia" href="http://www.youtube.com"><img src="https://cdn.glitch.com/20790d66-e9ac-4887-aec3-5d280347f5be%2Fyoutube.png?1542826505062"
+                            alt="Youtube Icon"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

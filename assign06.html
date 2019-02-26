@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>assign 06</title>
+    <style>
+
+        .row {
+    
+            align-items: center;
+            justify-content: center;
+            padding: 1em;
+        }
+
+        .leftcol{
+            margin: 0.5em;
+        }
+
+        .rightcol {
+            margin: 0.5em;
+            position: absolute;
+            left: 75%;
+            top: 12.5%;
+        }
+        .button {
+            background-color: #2e3034; 
+            border: none;
+            color: white;
+            padding: 15px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .colorSelector {
+            align-content: center;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            
+        }
+       
+        </style>
+</head>
+
+<body>
+    <h1>iPhone</h1>
+    <div class="row">
+        <div class="leftcol">
+            <table style="width:75%">
+                <tr>
+                    <td colspan="2">
+                        <h2 style="text-align: center">iPhone 7</h2>
+                    </td>
+                    <td colspan="2">
+                        <h2>iPhone 8</h2>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="10%">
+                        <p style="text-align: center">Choose Your Color</p>
+                        <p style="padding-left: 20%;"><button name="iPhone7" style="background-color: #000000; color:white; width: 80px;"
+                                value="matteBlack" onclick="setTo(1)">Matte Black</button><br>
+                            <button name="iPhone7" style="background-color: #edccbd; color: white; width: 80px;" value="rsGold"
+                                onclick="setTo(2)">Rose Gold</button><br>
+                            <button name="iPhone7" style="background-color: #2e3034; color: white; width: 80px;" value="jetBlack"
+                                onclick="setTo(3)">Jet Black</button><br>
+                            <button name="iPhone7" style="background-color: #cebea9; color: white; width: 80px;" value="gold"
+                                onclick="setTo(4)">Gold</button><br>
+                            <button name="iPhone7" style="background-color: #d7d7d7; color: white; width: 80px;" value="silver"
+                                onclick="setTo(5)">Silver</button></p>
+
+                    </td>
+                    <td width="20%">
+                        <img class="mySlides" style="padding-left:10%" id="front" src="https://ss7.vzw.com/is/image/VerizonWireless/iphone7-front-matblk?$png8alpha256$&hei=410">
+                        <img class="mySlides" style="padding-left:25%" id="side" src="https://ss7.vzw.com/is/image/VerizonWireless/iphone7-side-matblk?$png8alpha256$&hei=410">
+                        <img class="mySlides" style="padding-left:10%" id="back" src="https://ss7.vzw.com/is/image/VerizonWireless/iphone7-back-matblk?$png8alpha256$&hei=410">
+
+                        <p style="padding-left: 25%">
+                            <button class="iphone7l" onclick="plusDivs(-1,'mySlides')">&#10094;</button>
+                            <button class="iphone7r" onclick="plusDivs(1,'mySlides')">&#10095;</button>
+                        </p>
+                    </td>
+
+                    <!-- IPHONE 8 -->
+                    <td width="10%">
+                        <p style="text-align: center">Choose Your Color</p>
+                        <p style="padding-left: 30%;"><button name="iPhone8" style="background-color: #ff0000; color:white; width: 80px;"
+                                value="matteBlack" onclick="setTo(6)">Red</button><br>
+                            <button name="iPhone8" style="background-color: #cfbea9; color: white; width: 80px;" value="rsGold"
+                                onclick="setTo(7)">Gold</button><br>
+                            <button name="iPhone8" style="background-color: #979797; color: white; width: 80px;" value="jetBlack"
+                                onclick="setTo(8)">Space Grey</button><br>
+                            <button name="iPhone8" style="background-color: #d7d7d7; color: white; width: 80px;" value="silver"
+                                onclick="setTo(9)">Silver</button></p>
+
+                    </td>
+                    <td width="20%">
+                        <img class="mySlides8" style="padding-left:10%" id="front8" src="https://ss7.vzw.com/is/image/VerizonWireless/iPhone8_RED?$png8alpha256$&hei=410">
+                        <img class="mySlides8" style="padding-left:25%" id="side8" src="https://ss7.vzw.com/is/image/VerizonWireless/iPhone8_RED_side?$png8alpha256$&hei=410">
+                        <img class="mySlides8" style="padding-left:10%" id="back8" src="https://ss7.vzw.com/is/image/VerizonWireless/iPhone8_RED-back?$png8alpha256$&hei=410">
+
+                        <p style="padding-left: 25%">
+                            <button class="left" onclick="plusDivs(-1,'mySlides8')">&#10094;</button>
+                            <button class="right" onclick="plusDivs(1,'mySlides8')">&#10095;</button>
+                        </p>
+                    </td>
+                <tr>
+                    <td colspan="2">
+                        <div class="productSelector">
+                            <label>Matte Black</label><input type="checkbox" name="iPhone7" value="matteBlack7">
+                            <label>Rose Gold</label><input type="checkbox" name="iPhone7" value="rsGold7">
+                            <label>Jet Black</label><input type="checkbox" name="iPhone7" value="jetBlack7">
+                            <label>Gold</label><input type="checkbox" name="iPhone7" value="gold7">
+                            <label>Silver</label><input type="checkbox" name="iPhone7" value="silver7">
+                        </div>
+
+                    <td colspan="2">
+                        <div class="productSelector">
+                            <input type="checkbox" name="iPhone8" value="silver8">
+                            <input type="checkbox" name="iPhone8" value="gold8">
+                            <input type="checkbox" name="iPhone8" value="spaceGray8">
+                            <input type="checkbox" name="iPhone8" value="red8">
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h2 style="text-align: center">iPhone XR</h2>
+                    </td>
+                    <td colspan="2">
+                        <h2 style="text-align: center">iPhone XS Max</h2>
+                    </td>
+                </tr>
+
+                </tr>
+                <tr>
+                    <td>
+                        <p style="text-align: center">Choose Your Color</p>
+                        <p style="padding-left: 30%;"><button name="iPhonexr" style="background-color: #000000; color:white; width: 80px;"
+                                value="black" onclick="setTo(10)">Black</button><br>
+                            <button name="iPhonexr" style="background-color: #003a70; color: white; width: 80px;" value="rsGold"
+                                onclick="setTo(11)">Blue</button><br>
+                            <button name="iPhonexr" style="background-color: #ff7f50; color: white; width: 80px;" value="jetBlack"
+                                onclick="setTo(12)">Coral</button><br>
+                            <button name="iPhonexr" style="background-color: #ffff00; color:black; width: 80px;" value="gold"
+                                onclick="setTo(13)">Yellow</button><br>
+                            <button name="iPhonexr" style="background-color: #ffffff; color: black; width: 80px;" value="silver"
+                                onclick="setTo(14)">White</button><br>
+                            <button name="iPhonexr" style="background-color: #ff0000; color: white; width: 80px;" value="silver"
+                                onclick="setTo(15)">Red</button></p>
+                    </td>
+                    <td width="20%">
+                        <img class="mySlidesxr" style="padding-left:10%" id="frontxr" src="https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Black_PureAngles?$png8alpha256$&hei=410">
+                        <img class="mySlidesxr" style="padding-left:25%" id="sidexr" src="https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Black_PureAngles_Side?$png8alpha256$&hei=410">
+                        <img class="mySlidesxr" style="padding-left:10%" id="backxr" src="https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Black_PureAngles_Back?$png8alpha256$&hei=410">
+
+                        <p style="padding-left: 24%">
+                            <button class="left" onclick="plusDivs(-1,'mySlidesxr')">&#10094;</button>
+                            <button class="right" onclick="plusDivs(1, 'mySlidesxr')">&#10095;</button>
+                        </p>
+                    </td>
+                    <td>
+                        <p style="text-align: center">Choose Your Color</p>
+                        <p style="padding-left: 25%;">
+                            <button name="iPhonexsmax" style="background-color: #d7d7d7; color:black; width: 80px;"
+                                value="gold" onclick="setTo(16)">Silver</button><br>
+                            <button name="iPhonexsmax" style="background-color: #cfbea9; color: black; width: 80px;"
+                                value="silver" onclick="setTo(17)">Gold</button><br>
+                            <button name="iPhonexsmax" style="background-color: #807f84; color: white; width: 80px;"
+                                value="silver" onclick="setTo(18)">Space Grey</button></p>
+                    </td>
+                    <td width="20%">
+                        <img class="mySlidesxsmax" style="padding-left:10%" id="frontxsmax" src="https://ss7.vzw.com/is/image/VerizonWireless/apple-iphonexs-max-silver?$png8alpha256$&hei=410">
+                        <img class="mySlidesxsmax" style="padding-left:25%" id="sidexsmax" src="https://ss7.vzw.com/is/image/VerizonWireless/apple-iphonexs-max-silver-side?$png8alpha256$&hei=410">
+                        <img class="mySlidesxsmax" style="padding-left:10%" id="backxsmax" src="https://ss7.vzw.com/is/image/VerizonWireless/apple-iphonexs-max-silver-back?$png8alpha256$&hei=410">
+
+                        <p style="padding-left: 24%">
+                            <button class="left" onclick="plusDivs(-1,'mySlidesxsmax')">&#10094;</button>
+                            <button class="right" onclick="plusDivs(1, 'mySlidesxsmax')">&#10095;</button>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="productSelector">
+                            <label>Black</label><input type="checkbox" name="iPhonexr" value="blackxr">
+                            <label>Blue</label><input type="checkbox" name="iPhonexr" value="bluexr">
+                            <label>Coral</label><input type="checkbox" name="iPhonexr" value="coralxr">
+                            <label>Yellow</label><input type="checkbox" name="iPhonexr" value="yellowxr">
+                            <label>White</label><input type="checkbox" name="iPhonexr" value="whitexr">
+                            <label>Red</label><input type="checkbox" name="iPhonexr" value="redxr">
+                        </div>
+
+                    </td>
+                    <td colspan="2">
+                        <div class="productSelector">
+                            <lable>Silver</lable><input type="checkbox" name="iPhonexsmax" value="silverxsmax">
+                            <lable>Gold</lable><input type="checkbox" name="iPhonexsmax" value="goldxsmax">
+                            <lable>Space Grey</lable><input type="checkbox" name="iPhonexsmax" value="spaceGrayxsmax">
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="rightcol">
+            <table>
+                <tr>
+                    <td>ORDER</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div>
+        <label>Visa</label>
+        <input type="radio" name="card_type" id="visa" value="visa">
+        <br>
+        <label>Master Card</label>
+        <input type="radio" name="card_type" id="master" value="master">
+        <br>
+        <label>American Express</label>
+        <input type="radio" name="card_type" id="amex" value="amex">
+        <br>
+        <input type="text" name="cardNumber" id="cardNum" size="30" value="" onblur="ValidateCreditCardNumber()">
+        <span id="cardError"></span><br>
+        <input type="date">
+    </div>
+
+</body>
+<script language="javascript">
+    var model = 0;
+    var view = 0;
+    var text;
+
+    var iphone7views = [
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-front-matblk?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-side-matblk?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-back-matblk?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-front-rsgld?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-side-rsgld?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-back-rsgld?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-front-jetblk?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-side-jetblk?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-back-jetblk?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-front-gld?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-side-gld?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-back-gld?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-front-svr?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-side-svr?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iphone7-back-svr?$png8alpha256$&hei=410'
+    ]
+
+    var iphone8views = [
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhone8_RED?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhone8_RED_side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhone8_RED-back?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhone8-Gld?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhone8-Gld-side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhone8-Gld-back?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhone8-SpGry?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhone8-SpGry-side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhone8-SpGry-back?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhone8-Svr?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhone8-Svr-side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhone8-Svr-back?$png8alpha256$&hei=410'
+    ]
+
+    var iphonexrviews = [
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Black_PureAngles?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Black_PureAngles_Side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Black_PureAngles_Back?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Blue_PureAngles?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Blue_PureAngles_Side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Blue_PureAngles_Back?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Coral_PureAngles?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Coral_PureAngles_Side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Coral_PureAngles_Back?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Yellow_PureAngles?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Yellow_PureAngles_Side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Yellow_PureAngles_Back?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_White_PureAngles?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_White_PureAngles_Side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_White_PureAngles_Back?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Red_PureAngles?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Red_PureAngles_Side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Red_PureAngles_Back?$png8alpha256$&hei=410'
+    ]
+
+    var iphonexsmaxviews = [
+        'https://ss7.vzw.com/is/image/VerizonWireless/apple-iphonexs-max-silver?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/apple-iphonexs-max-silver-side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/apple-iphonexs-max-silver-back?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/apple-iphonexs-max-gold?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/apple-iphonexs-max-gold-side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/apple-iphonexs-max-gold-back?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/apple-iphonexs-max-spacegrey?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/apple-iphonexs-max-spacegrey-side?$png8alpha256$&hei=410',
+        'https://ss7.vzw.com/is/image/VerizonWireless/apple-iphonexs-max-spacegrey-back?$png8alpha256$&hei=410'
+    ]
+
+    function setTo(model) {
+
+        if (model == 1) {
+            document.getElementById('front').src = iphone7views[0]
+            document.getElementById('side').src = iphone7views[1]
+            document.getElementById('back').src = iphone7views[2]
+
+        } else if (model == 2) {
+            document.getElementById('front').src = iphone7views[3]
+            document.getElementById('side').src = iphone7views[4]
+            document.getElementById('back').src = iphone7views[5]
+
+        } else if (model == 3) {
+            document.getElementById('front').src = iphone7views[6]
+            document.getElementById('side').src = iphone7views[7]
+            document.getElementById('back').src = iphone7views[8]
+        } else if (model == 4) {
+            document.getElementById('front').src = iphone7views[9]
+            document.getElementById('side').src = iphone7views[10]
+            document.getElementById('back').src = iphone7views[11]
+        } else if (model == 5) {
+            document.getElementById('front').src = iphone7views[12]
+            document.getElementById('side').src = iphone7views[13]
+            document.getElementById('back').src = iphone7views[14]
+        } else if (model == 6) {
+            document.getElementById('front8').src = iphone8views[0]
+            document.getElementById('side8').src = iphone8views[1]
+            document.getElementById('back8').src = iphone8views[2]
+        } else if (model == 7) {
+            document.getElementById('front8').src = iphone8views[3]
+            document.getElementById('side8').src = iphone8views[4]
+            document.getElementById('back8').src = iphone8views[5]
+        } else if (model == 8) {
+            document.getElementById('front8').src = iphone8views[6]
+            document.getElementById('side8').src = iphone8views[7]
+            document.getElementById('back8').src = iphone8views[8]
+        } else if (model == 9) {
+            document.getElementById('front8').src = iphone8views[9]
+            document.getElementById('side8').src = iphone8views[10]
+            document.getElementById('back8').src = iphone8views[11]
+        } else if (model == 10) {
+            document.getElementById('frontxr').src = iphonexrviews[0]
+            document.getElementById('sidexr').src = iphonexrviews[1]
+            document.getElementById('backxr').src = iphonexrviews[2]
+        } else if (model == 11) {
+            document.getElementById('frontxr').src = iphonexrviews[3]
+            document.getElementById('sidexr').src = iphonexrviews[4]
+            document.getElementById('backxr').src = iphonexrviews[5]
+        } else if (model == 12) {
+            document.getElementById('frontxr').src = iphonexrviews[6]
+            document.getElementById('sidexr').src = iphonexrviews[7]
+            document.getElementById('backxr').src = iphonexrviews[8]
+        } else if (model == 13) {
+            document.getElementById('frontxr').src = iphonexrviews[9]
+            document.getElementById('sidexr').src = iphonexrviews[10]
+            document.getElementById('backxr').src = iphonexrviews[11]
+        } else if (model == 14) {
+            document.getElementById('frontxr').src = iphonexrviews[12]
+            document.getElementById('sidexr').src = iphonexrviews[13]
+            document.getElementById('backxr').src = iphonexrviews[14]
+        } else if (model == 15) {
+            document.getElementById('frontxr').src = iphonexrviews[15]
+            document.getElementById('sidexr').src = iphonexrviews[16]
+            document.getElementById('backxr').src = iphonexrviews[17]
+        } else if (model == 16) {
+            document.getElementById('frontxsmax').src = iphonexsmaxviews[0]
+            document.getElementById('sidexsmax').src = iphonexsmaxviews[1]
+            document.getElementById('backxsmax').src = iphonexsmaxviews[2]
+        } else if (model == 17) {
+            document.getElementById('frontxsmax').src = iphonexsmaxviews[3]
+            document.getElementById('sidexsmax').src = iphonexsmaxviews[4]
+            document.getElementById('backxsmax').src = iphonexsmaxviews[5]
+        } else if (model == 18) {
+            document.getElementById('frontxsmax').src = iphonexsmaxviews[6]
+            document.getElementById('sidexsmax').src = iphonexsmaxviews[7]
+            document.getElementById('backxsmax').src = iphonexsmaxviews[8]
+        }
+
+    }
+
+
+    var slideIndex = 1;
+
+    var phoneTypes = [
+        'mySlides',
+        'mySlides8',
+        'mySlidesxr',
+        'mySlidesxsmax'
+    ];
+
+    phoneTypes.forEach(phoneType => {
+        showDivs(slideIndex, phoneType);
+    })
+
+    function plusDivs(n, imageName) {
+        showDivs(slideIndex += n, imageName);
+    }
+
+    function showDivs(n, imageName) {
+
+        var x = document.getElementsByClassName(imageName);
+
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+
+    function sleep(time) {
+        return new Promise((resolve) => setTimeout(resolve, time));
+    }
+
+
+
+
+
+    function ValidateCreditCardNumber() {
+
+        var card_type = ''
+        var ccNum = document.getElementById("cardNum").value;
+        var visaRegEx = /^[0-9]{16}$/;
+        var mastercardRegEx = /^[0-9]{16}$/;
+        var amexpRegEx = /^[0-9]{16}$/;
+        var isValid = false;
+
+        console.log(ccNum)
+
+        if (document.getElementById('visa').checked) {
+            card_type = document.getElementById('visa').value;
+        } else if (document.getElementById('master').checked) {
+            card_type = document.getElementById('master').value;
+        } else if (document.getElementById('amex').checked) {
+            card_type = document.getElementById('amex').value;
+        }
+
+        console.log(card_type);
+
+        if (card_type == 'visa') {
+            text = "";
+            if (visaRegEx.test(ccNum)) {
+                isValid = true;
+            }
+            if (isValid) {
+                text = "Thank You!";
+            } else {
+                text = "Please provide a valid Visa number!";
+                if (ccNum == '') {
+                    text = ''
+                }
+            }
+            document.getElementById("cardError").innerHTML = text;
+
+        } else if (card_type == 'master') {
+            text = "";
+            if (mastercardRegEx.test(ccNum)) {
+                isValid = true;
+            }
+
+            if (isValid) {
+                text = "Thank You!";
+            } else {
+                text = "Please provide a valid Master Card number!";
+                if (ccNum == '') {
+                    text = ''
+                }
+            }
+            document.getElementById("cardError").innerHTML = text;
+        } else if (card_type == 'amex') {
+            text = "";
+            if (amexpRegEx.test(ccNum)) {
+                isValid = true;
+            }
+            if (isValid) {
+                text = "Thank You!";
+            } else {
+                text = "Please provide a valid American Express number!";
+                if (ccNum == '') {
+                    text = ''
+                }
+            }
+            document.getElementById("cardError").innerHTML = text;
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        html {
+            font-family: "Lucida Sans", sans-serif;
+            background: #0099F7;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #F11712, #0099F7);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #F11712, #0099F7);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .header {
+            background-color: #1e7069;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            text-align: center;
+
+        }
+
+        .menu a {
+            text-decoration: none;
+        }
+
+        .menu li:hover {
+            background-color: #0099cc;
+        }
+
+
+
+        .content {
+            background-color: #33b5e5;
+            padding: 15px;
+            color: #ffffff;
+            text-align: center;
+            font-size: 14px;
+
+        }
+
+
+
+        .footer {
+            background-color: #0099cc;
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        .backbox {
+            background-color: #0099cc;
+        }
+
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            /* For tablets: */
+            .col-s-1 {
+                width: 8.33%;
+            }
+
+            .col-s-2 {
+                width: 16.66%;
+            }
+
+            .col-s-3 {
+                width: 25%;
+            }
+
+            .col-s-4 {
+                width: 33.33%;
+            }
+
+            .col-s-5 {
+                width: 41.66%;
+            }
+
+            .col-s-6 {
+                width: 50%;
+            }
+
+            .col-s-7 {
+                width: 58.33%;
+            }
+
+            .col-s-8 {
+                width: 66.66%;
+            }
+
+            .col-s-9 {
+                width: 75%;
+            }
+
+            .col-s-10 {
+                width: 83.33%;
+            }
+
+            .col-s-11 {
+                width: 91.66%;
+            }
+
+            .col-s-12 {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            /* For desktop: */
+            .col-half {
+                width: 4.33%;
+            }
+
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+
+
+
+            .nice_line {
+                border: 0;
+                height: 1px;
+                background: #333;
+                background-image: linear-gradient(to right, #ccc, #333, #ccc);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Apple Products</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-2 col-s-2 menu">
+            <ul>
+                <a href="#mcpro">
+                    <li>MacBook Pro</li>
+                </a>
+            </ul>
+        </div>
+        <div class="col-2 col-s-2 menu">
+            <ul>
+                <a href="#ipd">
+                    <li>iPod</li>
+                </a>
+            </ul>
+        </div>
+        <div class="col-2 col-s-2 menu">
+            <ul>
+                <a href="#iphn">
+                    <li>iPhone</li>
+                </a>
+            </ul>
+        </div>
+        <div class="col-2 col-s-2 menu">
+            <ul>
+                <a href="#siri">
+                    <li>Siri</li>
+                </a>
+            </ul>
+        </div>
+        <div class="col-2 col-s-2 menu">
+            <ul>
+                <a href="#itns">
+                    <li>iTunes</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+
+        <div class="col-half"></div>
+        <div class="col-3 col-s-1 content">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBNhz6yk0eoA3Oy3YUxrNQyFb6VYLCxumXqtn_X_-U71H8bPCDyg">
+
+        </div>
+        <div class="col-half"></div>
+        <div class="col-7 col-s-7 content toppad">
+            <h3 id="mcpro">MacBook Pro</h3>
+            <p>The MacBook Pro (sometimes abbreviated as MBP) is a line of Macintosh portable computers introduced
+                in January 2006 by Apple Inc. It is the high-end model of the MacBook family and is currently available
+                in 13- and 15-inch screen sizes. A 17-inch version was available between April 2006 and June 2012.</p>
+            <p>The first generation MacBook Pro is externally similar to the PowerBook G4 it replaces, but uses Intel
+                Core processors instead of PowerPC G4 chips. The 15-inch model was introduced first, in January 2006;
+                the 17-inch model followed in April. Both received several updates and Core 2 Duo processors later in
+                2006.</p>
+        </div>
+
+
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div class="row">
+        <div class="col-half"></div>
+        <div class="col-3 col-s-1 content">
+            <img src="https://communities.apple.com/kb20181115/securedImage.jsp?productid=PL180&size=240x240">
+
+        </div>
+        <div class="col-half"></div>
+        <div class="col-7 col-s-7 content toppad">
+            <h3 id="ipd">iPod</h3>
+            <p>The iPod Classic (stylized and marketed as iPod classic and formerly just iPod) is a portable media
+                player created and formerly marketed by Apple Inc..</p>
+            <p>There were six generations of the iPod Classic, as well as a spin-off (the iPod Photo) that was later
+                re-integrated into the main iPod line. All generations used a 1.8-inch (46 mm) hard drive for storage.
+                The "classic" suffix was formally introduced with the rollout of the sixth-generation iPod on September
+                5, 2007. Prior to this, all iPod Classic models were simply referred to as iPods. It was
+                available in silver or black replacing the "signature iPod white".</p>
+
+        </div>
+
+
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div class="row">
+        <div class="col-half"></div>
+        <div class="col-3 col-s-1 content">
+            <img src="data:image/jpeg;base64,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">
+
+        </div>
+        <div class="col-half"></div>
+        <div class="col-7 col-s-7 content toppad">
+            <h3 id="iphn">iPhone</h3>
+            <p>iPhone (/ˈaɪfoʊn/ EYE-fone) is a line of smartphones designed and marketed by Apple Inc. All generations
+                of the iPhone use Apple's iOS mobile operating system software. The first-generation iPhone was
+                released on June 29, 2007, and multiple new hardware iterations with new iOS releases have been
+                released since.</p>
+            <p>The user interface is built around the device's multi-touch screen, including a virtual keyboard. The
+                iPhone has Wi-Fi and can connect to cellular networks. An iPhone can shoot video (though this was not a
+                standard feature until the iPhone 3GS), take photos, play music, send and receive email, browse the
+                web, send and receive text messages, follow GPS navigation, record notes, perform mathematical
+                calculations, and receive visual voicemail.</p>
+
+        </div>
+
+
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div class="row">
+        <div class="col-half"></div>
+        <div class="col-3 col-s-1 content">
+            <img src="https://www.macobserver.com/wp-content/uploads/2016/10/Siri-Icon.jpg" width="65%">
+
+        </div>
+        <div class="col-half"></div>
+        <div class="col-7 col-s-7 content toppad">
+            <h3 id="siri">Siri</h3>
+            <p>Siri (pronounced /ˈsɪri/) is a virtual assistant that is part of Apple Inc.'s iOS, watchOS, macOS, and
+                tvOS operating systems.[1] The assistant uses voice queries and a natural-language user interface to
+                answer questions, make recommendations, and perform actions by delegating requests to a set of Internet
+                services. The software adapts to users' individual language usages, searches, and preferences, with
+                continuing use. Returned results are individualized.</p>
+            <p>Siri is a spin-off from a project originally developed by the SRI International Artificial Intelligence
+                Center. Its speech recognition engine was provided by Nuance Communications, and Siri uses advanced
+                machine learning technologies to function.</p>
+
+        </div>
+
+
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div class="row">
+        <div class="col-half"></div>
+        <div class="col-3 col-s-1 content">
+            <img src="https://km.support.apple.com/kb/image.jsp?productid=PP200&size=240x240">
+
+        </div>
+        <div class="col-half"></div>
+        <div class="col-7 col-s-7 content toppad">
+            <h3 id="itns">iTunes</h3>
+            <p>iTunes is a media player, media library, Internet radio broadcaster, and mobile device
+                management application developed by Apple Inc. It was announced on January 9, 2001. It is used to play,
+                download, and organize digital multimedia files, including music and video, on personal computers
+                running the macOS and Windows operating systems. Content must be purchased through the iTunes Store,
+                whereas iTunes is the software letting users manage their purchases.</p>
+            <p>The original and main focus of iTunes is music, with a library offering organization, collection, and
+                storage of users' music collections. It can be used to rip songs from CDs, as well as play content with
+                the use of dynamic, smart playlists. Options for sound optimizations exist, as well as ways to
+                wirelessly share the iTunes library. </p>
+
+        </div>
+
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div class="footer">
+        <p>Resize the browser window to see how the content respond to the resizing.</p>
+    </div>
+
+</body>
+
+</html>

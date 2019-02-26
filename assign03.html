@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cameron Thompson's Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <nav>
+                <h1>Welcome to Cameron Thompson's Home Page</h1>
+                <ul>
+                    <li><a href="index.html">CS 213 Assignments</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <a href="https://www.arizona-leisure.com/arizona-pictures.html" title="Arizona Sunsets!" target="_blank"><img
+                         class="image" src="arizonaSunset.jpg" alt="Banner Image"></a>
+                <div class="overlay">
+                    <div class="text">See other Arizona Sunsets</div>
+                </div>
+            </div>
+        </header>
+        <button onclick="topFunction()" id="topBtn" title="Go to top">Top &#8593;</button>
+        <script>
+            // When the user scrolls down 50px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+                
+                function scrollFunction() {
+                  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("topBtn").style.display = "block";
+                  } else {
+                    document.getElementById("topBtn").style.display = "none";
+                  }
+                }
+    
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+                  
+                }
+                </script>
+        <section class="row">
+            <div class="leftcol">
+                <h1>
+                    A Little Bit About Me
+                </h1>
+                <p>Name: Cameron Thompson<br />
+                    Major: Software Engineering<br />
+                    From: Tucson, Arizona<br />
+                    <a href="#schedule">See my class schedule!</a><br />
+                    <a href="#form">Help me get to know you!</a>
+                </p>
+            </div>
+            <div class="rightcol">
+                <img id="img1" src="me.jpg" alt="Relaxing Kayaking">
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="leftcol">
+                <img id="img2" src="airplane.jpeg" alt="White Water">
+            </div>
+            <div class="rightcol">
+                <h1>
+                    Great Quote!
+                </h1>
+                <p class="secondparagraph">
+                    <blockquote>The air up there in the clouds is very pure and fine, bracing and delicious. And why
+                        shouldn't it be? --it is the same the angels breathe.
+                        <br />-Mark Twain, Roughing It</blockquote>
+                </p>
+            </div>
+        </section>
+        <section class="row">
+            <div class="leftcol">
+                <h1>
+                    The Office
+                </h1>
+                <p>This US adaptation, set at a paper company in Scranton, Pa., has a similar documentary style to that
+                    of the
+                    Ricky Gervais-led British original. It features the staff of Dunder-Mifflin, a staff that includes
+                    characters
+                    based on characters from the British show (and, quite possibly, people you work with in your
+                    office). There's
+                    <em>Jim</em>, the likable employee who's a bit of an everyman. <em>Jim</em> has a thing for
+                    receptionist-turned-sales
+                    rep <em>Pam</em>
+                    <ins>(because office romances are always a good idea).</ins> There's also <em>Dwight</em>, the
+                    successful co-worker who
+                    lacks
+                    social skills and common sense. And there's <em>Ryan</em>, who has held many jobs at the company.
+                </p>
+
+            </div>
+            <div class="rightcol">
+                <div class="w3-content w3-section" style="max-width:500px">
+                    <img class="mySlides" src="office.jpg" style="width:100%">
+                    <img class="mySlides" src="office-pranks-jim-dwight.png" style="width:100%">
+                    <img class="mySlides" src="officeChristmas.png" style="width:100%">
+                    <img class="mySlides" src="dwight.jpg" style="width:100%">
+                    <img class="mySlides" src="fire.jpg" style="width:100%">
+                </div>
+                <script>
+                    var myIndex = 0;
+                    carousel();
+                    
+                    function carousel() {
+                      var i;
+                      var x = document.getElementsByClassName("mySlides");
+                      for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                      }
+                      myIndex++;
+                      if (myIndex > x.length) {myIndex = 1}    
+                      x[myIndex-1].style.display = "block";  
+                      setTimeout(carousel, 3000); // Change image every 3 seconds
+                    }
+                    </script>
+            </div>
+        </section>
+        <section class="row">
+            <div id="schedule">
+                <h1>
+                    Class Schedule
+                </h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 15%">Course #</th>
+                            <th>Course Description</th>
+                            <th style="width: 10%">Section #</th>
+                            <th style="width: 15%">Class Time</th>
+                            <th style="width: 5%">Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CS 213</td>
+                            <td>Internet and web basics, web fundamentals, web browsers, web servers, and web
+                                terminology.
+                                This course teaches the concepts behind the fundamental tools used for building
+                                client-side
+                                web applications. It emphasizes client side programming standards and programming tools
+                                used to create dynamic web applications.</td>
+                            <td>3</td>
+                            <td>N/A</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>CS 241</td>
+                            <td>This course provides an introduction to object-oriented programming and common data
+                                structures for those not requiring the depth of CS 165 and CS 235.
+                            </td>
+                            <td>1</td>
+                            <td>MWRF -11:30AM - 12:30 PM</td>
+                            <td>STC</td>
+                        </tr>
+                        <tr>
+                            <td>CS 246</td>
+                            <td>Advanced object-oriented designs and software development.</td>
+                            <td>2</td>
+                            <td>MWF -12:45 - 1:45 PM</td>
+                            <td>STC</td>
+                        </tr>
+                        <tr>
+                            <td>FDREL 250</td>
+                            <td>This course focuses on the eternal ministry of Jesus Christ and His divine roles and
+                                teachings throughout His pre-mortal, mortal, and post-mortal life. Special emphasis is
+                                given to the Savior's central role in Heavenly Father's plan for His children. Students
+                                are
+                                invited to deepen their love for and testimony of Jesus Christ and to become more
+                                devoted
+                                disciples. This course builds upon students' previous sequential and topical gospel
+                                study
+                                experiences and is taught using blocks of scripture in context from across the standard
+                                works as well as the teachings of modern prophets..</td>
+                            <td>48</td>
+                            <td>N/A</td>
+                            <td>Online</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="row" id="form">
+            <h1>Help me get to know you!</h1>
+            <div id="form-outer">
+                <form>
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="username">Name: </label>
+                        </div>
+                        <div class="rightTab">
+                            <input type="text" name="userName" id="username" class="input-field" placeholder="Enter your name"
+                                >
+                        </div>
+                    </div>
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="userEmail">Email: </label>
+                        </div>
+                        <div class="rightTab">
+                            <input type="email" name="userEmail" id="userEmail" class="input-field" placeholder="Enter your Email"
+                                >
+                        </div>
+                    </div>
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="userAge">Age: </label>
+                        </div>
+                        <div class="rightTab">
+                            <input type="number" name="userAge" id="userAge" min="1" max="100" class="input-field"
+                                placeholder="age" >
+                        </div>
+                    </div>
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="userRating">How likely is that you would recommend The Office to a friend or
+                                colleague? </label>
+                        </div>
+                        <div class="rightTab">
+                            <ul>
+                                <li><label>1<input name="rating" value="1" type="radio" class="userRatings" ></label></li>
+                                <li><label>2<input name="rating" value="2" type="radio" class="userRatings" ></label></li>
+                                <li><label>3<input name="rating" value="3" type="radio" class="userRatings" ></label></li>
+                                <li><label>4<input name="rating" value="4" type="radio" class="userRatings" ></label></li>
+                                <li><label>5<input name="rating" value="5" type="radio" class="userRatings" ></label></li>
+                                <li><label>6<input name="rating" value="6" type="radio" class="userRatings" ></label></li>
+                                <li><label>7<input name="rating" value="7" type="radio" class="userRatings" ></label></li>
+                                <li><label>8<input name="rating" value="8" type="radio" class="userRatings" ></label></li>
+                                <li><label>9<input name="rating" value="9" type="radio" class="userRatings" ></label></li>
+                                <li><label>10<input name="rating" value="10" type="radio" class="userRatings" ></label></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="most-like">Who do you like in The Office: </label>
+                        </div>
+                        <div class="rightTab">
+                            <select id="most-like" name="mostLike">
+                                <option disabled selected value>Select an option</option>
+                                <option value="michealScott">Micheal Scott</option>
+                                <option value="dwightSchrute">Dwight Schrute</option>
+                                <option value="jimHalpert">Jim Halpert</option>
+                                <option value="pamBeesly">Pam Beesly</option>
+                                <option value="ryanHoward">Ryan Howard</option>
+                                <option value="andyBernard">Andy Bernard</option>
+                                <option value="robertCalifornia">Robert California</option>
+                                <option value="janLevinson">Jan Levinson</option>
+                                <option value="royAnderson">Roy Anderson</option>
+                                <option value="stanleyHudson">Stanley Hudson</option>
+                                <option value="kevinMalone">Kevin Malone</option>
+                                <option value="meredith Palmer">Meredith Palmer</option>
+                                <option value="angelaMartin">Angela Martin</option>
+                                <option value="Oscar Martinez">Oscar Martinez</option>
+                                <option value="phyllisLapin">Phyllis Lapin</option>
+                                <option value="kellyKapoor">Kelly Kapoor</option>
+                                <option value="tobyFlenderson">Toby Flenderson</option>
+                                <option value="creedBratton">Creed Braton</option>
+                                <option value="darrylPhilbin">Darryl Philbin</option>
+                                <option value="kellyErinHannon">Kelly Erin Hannon</option>
+                                <option value="gabeLewis">Gabe Lewis</option>
+                                <option value="nellieBertram">Nellie Bertram</option>
+                                <option value="clarkGreen">Clark Green</option>
+                                <option value="peteMiller">Pete Miller</option>
+                                <option value="toddPacker">Todd Packer</option>
+                                <option value="davidWallace">David Wallace</option>
+                                <option value="karenFilippelli">Karen Filippelli</option>
+                                <option value="charlesMiner">Charles Miner</option>
+                                <option value="joBennett">Jo Bennett</option>
+                                <option value="robertLipton">Robert Lipton</option>
+                                <option value="nateNickerson">Nate Nickerson</option>
+                                <option value="deangeloVickers">Deangelo Vikers</option>
+                                <option value="valJohnson">Val Johnson</option>
+                                <option value="cathySimms">Cathy Simms</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="preferences">Things that you want to do in the future<br>(Check all that
+                                apply): </label>
+                        </div>
+                        <div class="rightTab">
+                            <ul id="preferences" style="list-style: none;">
+                                <li><label><input name="prefer" value="1" type="checkbox" class="userRatings">Go to
+                                        space</label></li>
+                                <li><label><input name="prefer" value="2" type="checkbox" class="userRatings">Learn a
+                                        new language</label></li>
+                                <li><label><input name="prefer" value="3" type="checkbox" class="userRatings">Be a
+                                        millionare</label></li>
+                                <li><label><input name="prefer" value="4" type="checkbox" class="userRatings">Be a
+                                        billionare</label></li>
+                                <li><label><input name="prefer" value="5" type="checkbox" class="userRatings">Own a
+                                        business</label></li>
+                                <li><label><input name="prefer" value="6" type="checkbox" class="userRatings">Have a
+                                        family</label></li>
+                                <li><label><input name="prefer" value="7" type="checkbox" class="userRatings">Hike</label></li>
+                                <li><label><input name="prefer" value="8" type="checkbox" class="userRatings">Watch The
+                                        Office</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="comments">Any other important information:</label>
+                        </div>
+                        <div class="rightTab">
+                            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment"
+                                placeholder="Enter your comment here..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </form>
+            </div>
+        </section>
+        <section class="row">
+            <footer>
+                <h1>Some of my favorite links!</h1>
+                <ul>
+                    <li><a href="https://www.youtube.com/user/gregwyattjr" target="_blank">Apple Explained YouTube</a></li>
+                    <li><a href="https://www.boldmethod.com/" target="_blank">Boldmethod</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/" target="_blank">Geeks for Geeks</a></li>
+                </ul>
+            </footer>
+        </section>
+    </div>
+</body>
+
+</html>
