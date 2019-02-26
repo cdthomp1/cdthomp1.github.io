@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SPIDER DEV</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="week04_css.css">
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="flavicon.ico">
+    <style>
+        #banner {
+            width: 100%;
+        }
+
+        #img1 {
+            width: 450px;
+        }
+
+        .testi {
+            font-family: 'Roboto', Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+            min-width: 230px;
+            max-width: 315px;
+            width: 100%;
+            color: #000000;
+            text-align: center;
+            font-size: 16px;
+            background-color: #2C3447;
+            padding: 30px;
+            background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .testi h2,
+        .testi h4,
+        .testi blockquote {
+            margin: 0;
+        }
+
+        .testi h2,
+        .testi h4 {
+            font-weight: 300;
+        }
+
+        .testi h2 {
+            color: #ffffff;
+        }
+
+        .testi h4 {
+            color: #a6a6a6;
+        }
+
+        .testi blockquote {
+            font-size: 1em;
+            padding: 45px 20px 40px 50px;
+            margin-top: 30px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            position: relative;
+        }
+
+        .testi .profile {
+            width: 100px;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+            margin-bottom: 10px;
+            border: solid 5px #A6A57A;
+        }
+
+        hr {
+            height: 3px;
+            background-image: radial-gradient(closest-side,
+                hsla(0, 0%, 50%, 1.0),
+                hsla(0, 0%, 50%, 0) 100%);
+            position: relative;
+            width: 900px;
+            border: none;
+        }
+
+        .newspaper {
+            -webkit-column-count: 2;
+            /* Chrome, Safari, Opera */
+            -moz-column-count: 2;
+            /* Firefox */
+            column-count: 2;
+            margin-left: 5%;
+            margin-right: 5%;
+            font-size: 1.3rem;
+            font-family: Tahoma, Geneva, sans-serif;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+
+        <header>
+            <h1>Spider Development</h1>
+            <a href="assign04.html"><img id="logo" src="week4Image/spiderLogo.png" alt="Logo" /></a>
+        </header>
+
+        <nav>
+            <!-- navigation here -->
+            <ul>
+                <li><a href="assign04.html">Home</a></li>
+                <li><a href="assign04_2.html">Staff</a></li>
+            </ul>
+        </nav>
+        <div id="banner">
+            <img class="mySlides" id="banner" src="week4Image/softwareBanner.jpg" alt="Banner Image">
+        </div>
+
+        
+                <section class="row">
+                    <!-- this is the first row of content -->
+             
+                    <div class="leftcol">
+                        <img id="img1" src="week4Image/globalSolar.jpg" alt="Relaxing Kayaking">
+                        <!-- first row right column content here -->
+                    </div>
+                    <div class="rightcol">
+                        <h1 style="margin-bottom: 0; font-size: 2rem;">
+                            Our Pride and Joy
+                        </h1>
+                        <h2 style="margin-top: 0; margin-bottom: 10%">Global Solar</h2>
+                        <p style="font-size: 1.2rem">
+                            Founded in 1996, Global Solar Energy,® Inc (GSE) has evolved into a leading manufacturer of
+                            thin-film CIGS (Copper Indium Gallium diSelenide) solar solutions, with more flexible, thin
+                            film
+                            solar modules installed than any existing company. Combined with our software, we have
+                            helped them
+                            become the leading solar pannel provided for many businesses and residents.
+                        </p>
+                        <!-- first row left column content here -->
+                    </div>
+                </section>
+            
+        <section class="row">
+            <div>
+                <h1 style="font-size: 2rem;">Customer Testimonials</h1>
+                <hr>
+            </div>
+
+        </section>
+
+        <section class="row">
+            <div class="testi">
+                <img src="week4Image/blCEO.jpg" alt="profile-sample3" class="profile" />
+                <div>
+                    <h2>Eleanor Crisp</h2>
+                    <h4>Lulu Bella Boutique</h4>
+                    <span style="color: yellow">★★★★★</span>
+                    <blockquote>"We have grown sales by 300% with minimal hiring and the technology Spider built
+                        enabled that. Not only has the technology worked, but working with Spider has been great too.
+                        I consider them to be an extension of my team.”</blockquote>
+                </div>
+            </div>
+            <div class="testi"><img src="week4Image/rdjCEO.jpg" alt="profile-sample5" class="profile" />
+                <div>
+                    <h2>Gordon Norman</h2>
+                    <h4>Norman and CO. PLLC</h4>
+                    <span style="color: yellow">★★★★★</span>
+                    <blockquote>"Working with Spider has proven to be a great blessing. Their flexible pricing model
+                        and
+                        structured approach enable them to deliver outstanding work within budget. Ultimately, their
+                        technical expertise
+                        makes them critical partners."</blockquote>
+                </div>
+            </div>
+            <div class="testi"><img src="week4Image/edHelmsCEO.jpg" alt="profile-sample6" class="profile" />
+                <div>
+                    <h2>Chad Flenderson</h2>
+                    <h4>Flenderson Fabrication</h4>
+                    <span style="color: yellow;">★★★★★</span>
+                    <blockquote>"Software performs flawlessly with no complications to date.
+                        Exceptional project management has resulted in on-time deliveries and highly professional
+                        customer service. Their
+                        development team is has benefited us greatly."</blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="row">
+            <h1 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif; font-weight: 900; font-size: 3rem; margin-left: 100px; margin-right: 100px; color: #F0F3F5">
+                We create custom software that delivers on your business goals.
+            </h1>
+
+            <p class="newspaper">
+                Spider Development, a software development company in Austin, Texas, lets you digitize the core
+                function of your
+                business – the unique value proposition you deliver to your customers – with a bespoke, custom-crafted
+                software product (that only you have access to) without worrying about or managing any of the technical
+                details.
+
+                What if you could get all that with a software development company that “walks in your shoes?” At
+                Spider Development, we cultivate deep, probing insights about your business and how web, mobile,
+                database and IoT
+                technology could multiply and accelerate your organization’s worldwide impact.
+            </p>
+        </section>
+
+        <footer class="row">
+            <div class="leftcol">
+                <p style="font-size: .8rem; font-family: Tahoma, Geneva, sans-serif;">&copy; 2018 CS 213 - Cameron
+                    Thompson <br><a href="index.html">CS213 Assingments</a></p>
+            </div>
+            <div class="rightcol" style="padding-left: 50%">
+                <div class="zoom">
+                    <a class="socialmedia" href="http://www.facebook.com"><img src="https://cdn.glitch.com/20790d66-e9ac-4887-aec3-5d280347f5be%2Ffacebook.png?1542826502265"
+                            alt="Facebook icon"></a>
+                    <a class="socialmedia" href="http://www.twitter.com"><img src="https://cdn.glitch.com/20790d66-e9ac-4887-aec3-5d280347f5be%2Ftwitter.png?1542826503976"
+                            alt="Twitter Icon"></a>
+                    <a class="socialmedia" href="http://www.youtube.com"><img src="https://cdn.glitch.com/20790d66-e9ac-4887-aec3-5d280347f5be%2Fyoutube.png?1542826505062"
+                            alt="Youtube Icon"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
